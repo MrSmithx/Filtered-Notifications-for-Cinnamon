@@ -1,0 +1,6 @@
+{
+    "uuid": "notification-filter@local",
+    "name": "Notification Filter",
+    "description": "Only let selected applications show notifications. Click the panel icon to choose which ones.",
+    "max-instances": 1
+}

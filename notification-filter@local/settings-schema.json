@@ -1,0 +1,110 @@
+{
+    "layout": {
+        "type": "layout",
+        "pages": [
+            "general",
+            "apps"
+        ],
+        "general": {
+            "type": "page",
+            "title": "General",
+            "sections": [
+                "filtering",
+                "menu"
+            ]
+        },
+        "apps": {
+            "type": "page",
+            "title": "Applications",
+            "sections": [
+                "list"
+            ]
+        },
+        "filtering": {
+            "type": "section",
+            "title": "Filtering",
+            "keys": [
+                "enabled",
+                "new-apps-show"
+            ]
+        },
+        "list": {
+            "type": "section",
+            "title": "Applications",
+            "keys": [
+                "apps-help",
+                "apps"
+            ]
+        },
+        "menu": {
+            "type": "section",
+            "title": "Panel menu",
+            "keys": [
+                "recent-count",
+                "notes-per-app"
+            ]
+        }
+    },
+    "enabled": {
+        "type": "switch",
+        "default": false,
+        "description": "Filter notifications",
+        "tooltip": "When off, every notification is shown."
+    },
+    "new-apps-show": {
+        "type": "switch",
+        "default": false,
+        "description": "Show notifications from new apps",
+        "tooltip": "What happens the first time an app sends a notification. The app is then added to the list, where you can change it."
+    },
+    "apps-help": {
+        "type": "label",
+        "description": "Tick an app to show its notifications. Apps appear here after their first notification, and you can also add one by name."
+    },
+    "apps": {
+        "type": "list",
+        "description": "Applications",
+        "default": [],
+        "columns": [
+            {
+                "id": "name",
+                "title": "Application",
+                "type": "string"
+            },
+            {
+                "id": "id",
+                "title": "Identifier",
+                "type": "string"
+            },
+            {
+                "id": "show",
+                "title": "Show",
+                "type": "boolean"
+            }
+        ]
+    },
+    "migrated": {
+        "type": "generic",
+        "default": false
+    },
+    "recent-count": {
+        "type": "spinbutton",
+        "default": 5,
+        "min": 1,
+        "max": 15,
+        "step": 1,
+        "units": "apps",
+        "description": "Recent apps shown",
+        "tooltip": "How many recently seen apps the panel menu lists."
+    },
+    "notes-per-app": {
+        "type": "spinbutton",
+        "default": 3,
+        "min": 0,
+        "max": 10,
+        "step": 1,
+        "units": "notifications",
+        "description": "Notifications shown per app",
+        "tooltip": "Listed under each app in the panel menu. Only the title is kept, in memory, and cleared when you log out. 0 hides them."
+    }
+}
